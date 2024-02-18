@@ -5,12 +5,12 @@ import dip1.model.ReportManager;
 
 import java.util.Collection;
 
-
-public class ReportPrinter implements ReportManager {
+public class DisplayPrinter implements ReportManager {
+    @Override
     public void output(Collection<ReportItem> items) {
-        System.out.println("Output to printer");
+        System.err.println("OUTPUT TO DISPLAY");
         for (ReportItem item : items) {
-            System.out.format("printer %s - %f \n\r", item.getDescription(), item.getAmount());
+            System.out.format("DISPLAY %s - %f \n\r", item.getDescription(), item.getAmount());
         }
     }
 }

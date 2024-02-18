@@ -1,6 +1,8 @@
 package lsp2.model;
 
-public class Order {
+import lsp2.IOrder;
+
+public class Order implements IOrder {
     private final int price;
     private final int quantity;
 

@@ -1,9 +1,14 @@
 package lsp2.model;
 
-public class OrderBonus extends Order{
+import lsp2.IOrder;
+
+public class OrderBonus implements IOrder {
+    int quantity;
+    int price;
 
     public OrderBonus(int quantity, int price) {
-        super(quantity, price);
+        this.quantity = quantity;
+        this.price = price;
     }
 
     @Override
